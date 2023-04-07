@@ -1,0 +1,79 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.login form {
+    display: flex;
+    animation: dropdown .5s;
+}
+
+#login-form-visitor {
+    display: none;
+}
+
+.warning {
+    background-color: tomato;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.warning h1 {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    border-radius: 3rem;
+    color: white;
+    font-family: sans-serif;
+    animation: shake .5s;
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes dropdown {
+    0% {
+        scale: 1.2;
+        opacity: 0;
+    }
+
+    50% {
+        scale: .9;
+        opacity: .5;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-1em);
+    }
+
+    40% {
+        transform: translateX(1em);
+    }
+
+    60% {
+        transform: translateX(-0.5em);
+    }
+
+    80% {
+        transform: translateX(0.5em);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
